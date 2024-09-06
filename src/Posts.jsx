@@ -12,6 +12,7 @@ export function Posts() {
 	const { data, isError, isPending, error } = useQuery({
 		queryKey: ["posts"],
 		queryFn: fetchPosts,
+		staleTime: 2000,
 	});
 
 	if (isPending) {
